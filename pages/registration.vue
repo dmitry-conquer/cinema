@@ -20,37 +20,48 @@
           register
         </button>
         <button
+          v-if="!firebaseStore.currentUser"
           @click="signInHandle"
           class="px-4 py-2 bg-secondary rounded-xl">
           signin
         </button>
         <button
+          v-else
           @click="signOutHandle"
           class="px-4 py-2 bg-secondary rounded-xl">
           signout
         </button>
+        <ClientOnly>
+          <pre>
+        {{ firebaseStore.currentUser }}
+      </pre
+          >
+        </ClientOnly>
+        <div v-if="firebaseStore.currentUser">already signed in</div>
+
+        <div v-else>SIGNED IN</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { useFirebaseStore } from "~/stores/firestoreUser";
+const firebaseStore = useFirebaseStore();
+
 const email = ref("");
 const password = ref("");
 
 async function createUserHandle() {
-  const credential = await createUser(email.value, password.value);
-  console.log(credential);
+  createUser(email.value, password.value);
 }
 
 async function signInHandle() {
-  const credential = await signIn(email.value, password.value);
-  console.log(credential);
+  signIn(email.value, password.value);
 }
 
 async function signOutHandle() {
-  const result = await signOutUser();
-  console.log(result);
+  signOutUser();
 }
 </script>
 

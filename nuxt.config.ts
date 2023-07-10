@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "@pinia/nuxt"],
+
+  pinia: {
+    autoImports: ["defineStore"],
+  },
+
   runtimeConfig: {
     apiKey: process.env.API_KEY,
     aiApiKey: process.env.AI_API_KEY,

@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 export default defineNuxtPlugin(async () => {
   const config = useRuntimeConfig();
   const firebaseConfig = {
-    apiKey: "AIzaSyBb7_gYzh09NXt1L47dzg_m8Zf52yhaZLI",
+    apiKey: config.public.FIREBASE_API_KEY,
     authDomain: "cinema-fb610.firebaseapp.com",
     projectId: "cinema-fb610",
     storageBucket: "cinema-fb610.appspot.com",

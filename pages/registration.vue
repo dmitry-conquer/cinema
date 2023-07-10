@@ -38,7 +38,6 @@
           >
         </ClientOnly>
         <div v-if="firebaseStore.currentUser">already signed in</div>
-
         <div v-else>SIGNED IN</div>
       </div>
     </div>

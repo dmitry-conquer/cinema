@@ -10,9 +10,10 @@ export default defineNuxtConfig({
     apiKey: process.env.API_KEY,
     aiApiKey: process.env.AI_API_KEY,
     org: process.env.ORG,
-    public: {
-      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
-    },
+    FIREBASE_API_KEY: "AIzaSyBb7_gYzh09NXt1L47dzg_m8Zf52yhaZLI",
+    // public: {
+    //   FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+    // },
   },
   routeRules: {
     "/infinity": { ssr: false },

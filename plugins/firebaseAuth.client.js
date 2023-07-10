@@ -21,6 +21,6 @@ export default defineNuxtPlugin(async () => {
   const db = getFirestore(app);
 
   return {
-    provide: { db },
+    provide: { db, auth },
   };
 });

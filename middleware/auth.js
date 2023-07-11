@@ -6,9 +6,4 @@ export default defineNuxtRouteMiddleware((to, from) => {
   // or only skip middleware on initial client load
   //   const nuxtApp = useNuxtApp();
   //   if (process.client && nuxtApp.isHydrating && nuxtApp.payload.serverRendered) return;
-
-  const { $auth } = useNuxtApp();
-  if (!$auth?.currentUser) {
-    return navigateTo("/registration");
-  }
 });

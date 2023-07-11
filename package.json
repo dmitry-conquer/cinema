@@ -20,7 +20,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
     "autoprefixer": "^10.4.14",
-    "firebase": "^10.0.0",
+    "firebase-admin": "^11.9.0",
     "nuxt-swiper": "^1.1.1",
     "openai": "^3.3.0",
     "pinia": "^2.1.4",

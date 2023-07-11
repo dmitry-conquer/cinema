@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  spaLoadingTemplate: false,
   modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "@pinia/nuxt"],
 
   pinia: {

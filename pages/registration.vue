@@ -27,7 +27,7 @@
         </button>
         <button
           v-else
-          @click="signOutHandle"
+          @click="signOutUser"
           class="px-4 py-2 bg-secondary rounded-xl">
           signout
         </button>
@@ -57,10 +57,6 @@ async function createUserHandle() {
 
 async function signInHandle() {
   signIn(email.value, password.value);
-}
-
-async function signOutHandle() {
-  signOutUser();
 }
 </script>
 

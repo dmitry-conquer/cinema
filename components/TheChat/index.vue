@@ -71,7 +71,8 @@ function sendMessage() {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+ul {
 /* Firefox */
 * {
   scrollbar-width: thin;
@@ -107,4 +108,6 @@ function sendMessage() {
 *::-webkit-scrollbar-thumb:active {
   background-color: #575757;
 }
+}
+
 </style>

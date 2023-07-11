@@ -8,7 +8,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
   //   if (process.client && nuxtApp.isHydrating && nuxtApp.payload.serverRendered) return;
 
   const { $auth } = useNuxtApp();
-  console.log($auth);
   if (!$auth?.currentUser) {
     return navigateTo("/registration");
   }

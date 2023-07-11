@@ -6,7 +6,7 @@
           v-model="email"
           type="text"
           placeholder="email"
-          class="bg-transparent" />
+          class="bg-transparen" />
         <input
           v-model="password"
           type="text"
